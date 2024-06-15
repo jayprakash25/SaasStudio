@@ -1,21 +1,70 @@
-import React from "react";
+import { delay } from "framer-motion";
 import { IoArrowForward } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const title = "SaaS Studios";
+  const message = "WE DESIGN FOR THE FUTURE";
+
   return (
-    <div>
-      <div className="py-10 space-y-4 text-center text-white">
-        <h1 className="text-6xl font-bold poppins-regular ">SAAS STUDIOS</h1>
-        <p className="max-w-sm m-auto text-lg font-semibold">
-          WE DESIGN AND DEVELOP HIGH-LEVEL DIGITAL PRODUCTS.
-        </p>
-      </div>
-      <div>
-        <button className="flex items-center text-white justify-center space-x-3 bg-[#1d9bf0] w-[85vw] md:w-[70vw] lg:w-[20vw] mx-auto py-3.5 rounded-full ">
-          <h1 className="text-xl font-semibold ">Book a Call</h1>
-          <IoArrowForward size={25} className="-rotate-45" />
+    <div className="h-screen flex items-center justify-center  overflow-hidden">
+      <div className="relative z-10 text-center text-white">
+        <motion.h3
+          className="load-screen--message"
+          variants={sentence}
+          initial="hidden"
+          animate="visible"
+        >
+          {title.split("").map((char, index) => (
+            <motion.span
+              className="text-6xl md:text-8xl lg:text-9xl font-bold poppins-bold mb-6 "
+              key={char + "-" + index}
+              variants={letter}
+            >
+              {char}
+            </motion.span>
+          ))}
+
+          <br />
+
+          {message.split("").map((word, index) => (
+            <motion.span
+              className="max-w-md mx-auto text-xl mb-10 text-gray-300 ubuntu-bold"
+              key={word + "-" + index}
+              variants={letter}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.h3>
+        <button
+          className={`group flex items-center justify-center space-x-3 bg-[#aaeec4] text-gray-900 w-64 mx-auto py-3.5 mt-5 rounded-full transition-all duration-300 hover:bg-white`}
+        >
+          <span className="text-xl font-semibold">Book a Call</span>
+          <IoArrowForward
+            size={25}
+            className="transform -rotate-45 group-hover:translate-x-1 transition-transform"
+          />
         </button>
       </div>
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-50"></div> */}
+      {/* <div className="absolute inset-0 bg-repeat opacity-5"></div> */}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { HeroSection } from "./components/index";
 export default function App() {
   return (
-    <div className="bg-[#222222] w-screen h-screen">
+    <div className="bg-[#222222] w-full h-screen">
       <HeroSection />
 
       <div className="flex justify-center mt-16">
