@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection } from "./components/index";
+import { HeroSection, Line } from "./components/index";
 import data from "./data/Clients";
 export default function App() {
   return (
@@ -21,34 +21,60 @@ export default function App() {
         </div>
       </div>
 
-      <div className="justify-between max-w-6xl gap-10 mx-auto md:flex">
-        <div className="px-6 text-white">
-          <h1 className="mt-16 text-2xl font-bold md:text-5xl md:max-w-sm">
+      <div className="justify-between max-w-6xl gap-10 pt-10 mx-auto md:pl-4 md:flex">
+        <div className="px-6 text-white ">
+          <h1 className="max-w-md mt-16 text-2xl font-bold md:text-5xl md:max-w-sm">
             Why Our Clients Choose Us
           </h1>
         </div>
-        
+
         <div className="flex flex-col justify-center px-6 py-12 gap-7 md:px-3">
           {data.map((item, i) => {
             return (
               <React.Fragment key={i}>
                 <div
-                  className={`max-w-md md:max-w-xl  bg-[#272727] p-5 rounded-lg space-y-2 ${
+                  className={`max-w-md  md:max-w-2xl  bg-[#272727] p-10 rounded-xl space-y-4 ${
                     item.tittle === "Custom Crafted Solutions"
                       ? "  bg-[#aaeec4] text-black"
                       : "text-white"
                   }`}
                 >
+                  <img
+                    src={item.icon}
+                    className={`w-16 h-16 ${
+                      item.tittle === "Custom Crafted Solutions"
+                        ? "bg-black"
+                        : null
+                    } bg-[#aaeec4] text-black rounded-full p-2`}
+                    alt=""
+                  />
                   <h1 className="text-lg font-bold md:text-xl">
                     {item.tittle}
                   </h1>
-                  <p className="font-bold md:text-lg">{item.Para}</p>
+                  <p className="font-semibold md:text-lg">{item.Para}</p>
                 </div>
               </React.Fragment>
             );
           })}
         </div>
       </div>
+
+      <div className="justify-between max-w-5xl gap-10 py-10 mx-auto md:flex">
+        <div className="px-6 text-white ">
+          <h1 className="text-2xl font-bold md:text-5xl md:max-w-sm">
+            Explore Our Workflow
+          </h1>
+        </div>
+      </div>
+
+       
+       
+
+    <Line/>
+    <Line/>
+    <Line/>
+
+    <Line/>
     </div>
   );
 }

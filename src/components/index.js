@@ -1,4 +1,5 @@
 import HeroSection from './HeroSection'
+import Line from './Line'
 
 
-export { HeroSection }
+export { HeroSection , Line }
