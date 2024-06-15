@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   const title = "SaaS Studios";
-  const message = "WE DESIGN FOR THE FUTURE";
+  const message = "WE DESIGN FOR THE FUTURE.";
 
   return (
     <div className="h-screen flex items-center justify-center  overflow-hidden">
