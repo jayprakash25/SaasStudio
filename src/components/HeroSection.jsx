@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <div>
       <div className="py-10 space-y-4 text-center text-white">
-        <h1 className="text-6xl font-bold px-">SAAS STUDIOS</h1>
+        <h1 className="text-6xl font-bold md:text-9xl ">SAAS STUDIOS</h1>
         <p className="max-w-sm m-auto text-lg font-semibold">
           WE DESIGN AND DEVELOP HIGH-LEVEL DIGITAL PRODUCTS.
         </p>
