@@ -1,4 +1,3 @@
-import { delay } from "framer-motion";
 import { IoArrowForward } from "react-icons/io5";
 import { motion } from "framer-motion";
 
@@ -24,7 +23,7 @@ export default function HeroSection() {
 
   return (
     <div className="h-screen flex items-center justify-center  overflow-hidden">
-      <div className="relative z-10 text-center text-white">
+      <div className="relative z-10 space-y-8 text-center text-white">
         <motion.h3
           className="load-screen--message"
           variants={sentence}
@@ -33,7 +32,7 @@ export default function HeroSection() {
         >
           {title.split("").map((char, index) => (
             <motion.span
-              className="text-6xl md:text-8xl lg:text-9xl font-bold poppins-bold mb-6 "
+              className="text-5xl md:text-7xl lg:text-9xl font-bold poppins-bold mb-6 "
               key={char + "-" + index}
               variants={letter}
             >
@@ -45,7 +44,7 @@ export default function HeroSection() {
 
           {message.split("").map((word, index) => (
             <motion.span
-              className="max-w-md mx-auto text-xl mb-10 text-gray-300 ubuntu-bold"
+              className="max-w-md mx-auto text-lg  md:text-xl mb-10 text-gray-300 ubuntu-bold"
               key={word + "-" + index}
               variants={letter}
             >
@@ -63,8 +62,6 @@ export default function HeroSection() {
           />
         </button>
       </div>
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-50"></div> */}
-      {/* <div className="absolute inset-0 bg-repeat opacity-5"></div> */}
     </div>
   );
 }

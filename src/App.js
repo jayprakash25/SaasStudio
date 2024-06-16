@@ -3,11 +3,13 @@ import { HeroSection, Line } from "./components/index";
 import data from "./data/Clients";
 import workflow from "./data/Workflow";
 import Plans from "./data/Plans";
+import Projects from "./components/Projects";
 
 export default function App() {
   return (
     <div className="bg-[#222222] w-screen overflow-x-clip">
       <HeroSection />
+      <Projects />
       <div className="mt-20">
         <div className="flex flex-col max-w-md px-6 mx-auto text-white md:max-w-7xl md:justify-between md:flex-row">
           <h1 className="text-2xl font-bold md:text-5xl">What We Do</h1>
