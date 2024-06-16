@@ -1,7 +1,7 @@
 import { IoArrowForward } from "react-icons/io5";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+export default function HeroSection({ tittle, message }) {
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -18,11 +18,11 @@ export default function HeroSection() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const title = "SaaS Studios";
-  const message = "WE DESIGN FOR THE FUTURE.";
+  const til = tittle;
+  const msg = message;
 
   return (
-    <div className="h-screen flex items-center justify-center  overflow-hidden">
+    <div className="flex items-center justify-center h-screen overflow-hidden">
       <div className="relative z-10 space-y-8 text-center text-white">
         <motion.h3
           className="load-screen--message"
@@ -30,9 +30,9 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          {title.split("").map((char, index) => (
+          {til.split("").map((char, index) => (
             <motion.span
-              className="text-5xl md:text-7xl lg:text-9xl font-bold poppins-bold mb-6 "
+              className="mb-6 text-6xl font-bold md:text-7xl lg:text-[190px] poppins-bold "
               key={char + "-" + index}
               variants={letter}
             >
@@ -42,9 +42,9 @@ export default function HeroSection() {
 
           <br />
 
-          {message.split("").map((word, index) => (
+          {msg.split("").map((word, index) => (
             <motion.span
-              className="max-w-md mx-auto text-lg  md:text-xl mb-10 text-gray-300 ubuntu-bold"
+              className="max-w-md mx-auto mb-10 text-lg text-gray-300 md:text-xl lg:text-2xl ubuntu-bold"
               key={word + "-" + index}
               variants={letter}
             >
@@ -58,7 +58,7 @@ export default function HeroSection() {
           <span className="text-xl font-semibold">Book a Call</span>
           <IoArrowForward
             size={25}
-            className="transform -rotate-45 group-hover:translate-x-1 transition-transform"
+            className="transition-transform transform -rotate-45 group-hover:translate-x-1"
           />
         </button>
       </div>
