@@ -4,12 +4,11 @@ import { data } from "../data/Projects";
 
 export default function Projects() {
   return (
-    <div className="text-white px-6 lg:px-10">
-      <div className="space-y-4">
-        <h1 className="text-7xl ubuntu-bold">Projects</h1>
-        <p className="ubuntu-medium text-3xl">The work we talk about.</p>
+    <div className="flex-col justify-between gap-10 pt-20 mx-auto text-white max-w-7xl md:px-7 md:flex">
+      <div className="px-6">
+        <h1 className="text-2xl font-bold md:text-5xl">Projects</h1>
       </div>
-      <div className="grid md:grid-cols-2 lg:gap-y-4 lg:py-10 lg:px-10 lg:gap-x-10">
+      <div className="grid pt-10 md:grid-cols-2 lg:gap-y-4 lg:py-10 lg:px-10 lg:gap-x-10 place-items-center">
         {data.map((project) => {
           return (
             <div className={`${project.id % 2 === 0 ? "py-20" : ""}`}>

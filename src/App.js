@@ -9,8 +9,10 @@ export default function App() {
   return (
     <div className="bg-[#222222] w-screen overflow-x-clip">
       <HeroSection />
+
       <Projects />
-      <div className="mt-20">
+
+      <div className="mt-24">
         <div className="flex flex-col max-w-md px-6 mx-auto text-white md:max-w-7xl md:justify-between md:flex-row">
           <h1 className="text-2xl font-bold md:text-5xl">What We Do</h1>
           <div className="mt-5 space-y-5 md:max-w-2xl">
@@ -25,14 +27,15 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="justify-between gap-10 pt-20 mx-auto max-w-7xl md:px-7 md:flex">
+
+      <div className="justify-between gap-10 pt-24 mx-auto max-w-7xl md:px-7 md:flex">
         <div className="px-6 text-white md:px-0 ">
           <h1 className="max-w-md mt-16 text-2xl font-bold md:text-5xl md:max-w-sm">
             Why Our Clients Choose Us
           </h1>
         </div>
 
-        <div className="flex flex-col justify-center px-6 py-12 gap-7 md:px-3">
+        <div className="flex flex-col justify-center px-6 py-16 gap-7 md:px-3">
           {data.map((item, i) => {
             return (
               <React.Fragment key={i}>
@@ -62,6 +65,7 @@ export default function App() {
           })}
         </div>
       </div>
+
       <div className="justify-between gap-10 py-20 mx-auto max-w-7xl md:px-7 md:flex">
         <div className="px-6 text-white ">
           <h1 className="text-2xl font-bold md:text-5xl md:max-w-sm">

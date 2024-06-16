@@ -54,8 +54,6 @@
       "wdth" 100;
   }
   
-  
-  
   .ubuntu-regular {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
@@ -74,13 +72,7 @@
     font-style: normal;
   }
   
-  
-  
-  
-  
-  
-
-
+ 
 .animate-marquee {
   animation: marquee 10s linear infinite;
 }

@@ -25,7 +25,7 @@ export default function ProjectCard({ project }) {
                 key={currentImage}
                 src={project.images[currentImage]}
                 alt={project.title}
-                className=" w-full absolute h-full rounded-lg  object-cover"
+                className="absolute object-cover w-full h-full rounded-lg "
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
@@ -34,21 +34,17 @@ export default function ProjectCard({ project }) {
             </AnimatePresence>
           </div>
         </motion.div>
-
         {/* Dots */}
         <div className="flex justify-center mt-4">
           {project.images.map((_, index) => (
             <button
               key={index}
               onClick={() => goToImage(index)}
-              className={`h-2 w-2 rounded-full mx-1 ${
-                currentImage === index ? "bg-[#aaeec4]" : "bg-gray-300"
-              }`}
+              className={`h-2 w-2 rounded-full mx-1 bg-gray-300 `}
             />
           ))}
         </div>
       </div>
-      <h2 className="ubuntu-medium py-4 text-xl">{project.title}</h2>
     </div>
   );
 }
