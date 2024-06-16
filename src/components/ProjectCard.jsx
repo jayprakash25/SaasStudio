@@ -7,7 +7,7 @@ export default function ProjectCard({ project }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % project.images.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [project.images.length]);
 
@@ -17,9 +17,11 @@ export default function ProjectCard({ project }) {
 
   return (
     <div>
-      <div className={`lg:p-10 p-5  rounded-3xl bg-[${project.bgcolor}]`}>
+      <div
+        className={`lg:p-10 px-5 l flex flex-col justify-center items-center rounded-3xl bg-[${project.bgcolor}]`}
+      >
         <motion.div classname="project-card">
-          <div className="image-carousel relative w-[20rem] h-52  lg:h-80 lg:w-[30rem] overflow-hidden">
+          <div className="image-carousel relative w-[20rem] h-60  lg:h-[30rem] lg:w-[45rem] overflow-hidden">
             <AnimatePresence initial={false}>
               <motion.img
                 key={currentImage}
@@ -29,7 +31,7 @@ export default function ProjectCard({ project }) {
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.75 }}
+                transition={{ duration: 1 }}
               />
             </AnimatePresence>
           </div>

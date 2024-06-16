@@ -73,13 +73,6 @@
     font-weight: 700;
     font-style: normal;
   }
-  
-  
-  
-  
-  
-  
-
 
 .animate-marquee {
   animation: marquee 10s linear infinite;
@@ -88,3 +81,7 @@
 .animate-marquee2 {
   animation: marquee 10s linear infinite;
 }
+
+
+
+
