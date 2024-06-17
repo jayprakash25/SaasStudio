@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection } from "../components";
+import { HeroSection, Navbar } from "../components";
 import Footer from "../components/Footer";
 
 export default function Contact() {
@@ -37,6 +37,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <Navbar />
       <Footer />
     </div>
   );

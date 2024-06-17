@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection, Line } from "../components/index";
+import { HeroSection, Line, Navbar } from "../components/index";
 import data from "../data/Clients";
 import workflow from "../data/Workflow";
 import Plans from "../data/Plans";
@@ -42,10 +42,10 @@ export default function Home() {
             return (
               <React.Fragment key={i}>
                 <div
-                  className={`max-w-md  md:max-w-2xl  bg-[#272727] p-10 rounded-xl space-y-4 ${
+                  className={`max-w-md  md:max-w-2xl   p-10 rounded-xl space-y-4 ${
                     item.tittle === "Custom Crafted Solutions"
                       ? "  bg-[#aaeec4] text-black"
-                      : "text-white"
+                      : "bg-[#272727] text-white"
                   }`}
                 >
                   <img
@@ -102,10 +102,10 @@ export default function Home() {
           return (
             <React.Fragment key={i}>
               <div
-                className={`bg-[#272727] ${
+                className={` ${
                   item.tittle === "Landing page"
                     ? "bg-[#aaeec4] text-black"
-                    : "text-white"
+                    : "text-white bg-[#272727]"
                 } space-y-4 max-w-md rounded-xl  p-8`}
               >
                 <h1 className="text-xl font-bold md:text-2xl">{item.tittle}</h1>
@@ -147,7 +147,7 @@ export default function Home() {
           );
         })}
       </div>
-
+      <Navbar />
       <Footer />
     </div>
   );
