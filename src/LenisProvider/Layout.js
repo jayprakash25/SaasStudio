@@ -1,9 +1,10 @@
 import React from "react";
-import { ReactLenis, useLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
+// useLenis
 function Layout({ children }) {
-  const lenis = useLenis(({ scroll }) => {
-    // You can add any global scroll handling here
-  });
+  // const lenis = useLenis(({ scroll }) => {
+  //   // You can add any global scroll handling here
+  // });
 
   return (
     <ReactLenis root options={{ duration: 3, smoothWheel: true }}>

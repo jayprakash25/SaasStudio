@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <footer className="pb-10 overflow-hidden">
+      <footer className="pb-10 overflow-hidden -z-50">
         <div className="flex animate-marquee whitespace-nowrap">
           <h1 className="mr-16 text-6xl font-bold text-white md:text-9xl">
             SAAS STUDIOS INDIA

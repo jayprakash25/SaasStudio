@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection, Line } from "../components/index";
+import { HeroSection, Line, Navbar } from "../components/index";
 import data from "../data/Clients";
 import workflow from "../data/Workflow";
 import Plans from "../data/Plans";
@@ -109,7 +109,7 @@ export default function Home() {
           return (
             <React.Fragment key={i}>
               <div
-                className={`bg-[#272727] ${
+                className={` ${
                   item.tittle === "Landing page"
                     ? "bg-[#5ED0E7] text-black"
                     : "text-white"
@@ -154,7 +154,7 @@ export default function Home() {
           );
         })}
       </div>
-
+      <Navbar />
       <Footer />
     </div>
   );
