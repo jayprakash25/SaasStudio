@@ -4,9 +4,9 @@ import { data } from "../data/Projects";
 
 export default function Projects() {
   return (
-    <div className="flex-col justify-between gap-10 mx-auto text-white pt-28 max-w-7xl md:px-7 md:flex">
+    <div className="flex-col justify-between gap-10 mx-auto text-white pt-28 max-w-7xl  md:flex">
       <div className="px-6">
-        <h1 className="text-2xl font-bold md:text-5xl">Projects</h1>
+        <h1 className="text-2xl font-bold md:text-5xl">Our Recent Work</h1>
       </div>
       <div className="grid lg:pt-10  px-5 lg:gap-y-4 lg:py-10 lg:px-10 lg:gap-x-10">
         {data.map((project) => {

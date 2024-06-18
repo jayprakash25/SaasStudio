@@ -6,7 +6,7 @@ function Layout({ children }) {
   });
 
   return (
-    <ReactLenis root options={{ duration: 1.2, smoothWheel: true }}>
+    <ReactLenis root options={{ duration: 3, smoothWheel: true }}>
       {children}
     </ReactLenis>
   );

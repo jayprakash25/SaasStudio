@@ -14,6 +14,6 @@ export const data = [
     title: "MentorHeal",
     images: [m1, m2, m3],
     url: "https://www.example.com",
-    bgcolor: "#aaeec4",
+    bgcolor: "#5ED0E7",
   },
 ];
