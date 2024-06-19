@@ -5,10 +5,11 @@ import workflow from "../data/Workflow";
 import Plans from "../data/Plans";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import AboutUs from "../components/AboutUs";
 
 export default function Home() {
   return (
-    <div className="bg-[#222222] w-screen overflow-x-clip px-2">
+    <div className="bg-gradient-to-b from-[#141414] to-[#1f1f1f] w-screen overflow-x-clip px-2">
       <HeroSection
         tittle={"SaaS Studios"}
         message={"WE DESIGN FOR THE FUTURE."}
@@ -87,7 +88,7 @@ export default function Home() {
                 <h3 className="text-xl ubuntu-bold text-white mb-2">
                   {item.tittle}
                 </h3>
-                <p className="text-gray-400 max-w-md poppins-medium">
+                <p className="text-gray-300 max-w-md poppins-medium">
                   {item.Para}
                 </p>
               </div>
@@ -95,7 +96,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-
+      {/* about us  */}
+      <AboutUs />
       <div className="justify-between gap-10 mx-auto pt-28 max-w-7xl  md:flex">
         <div className="px-6 text-white ">
           <h1 className="text-2xl font-bold md:text-5xl md:max-w-lg">

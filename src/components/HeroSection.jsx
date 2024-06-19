@@ -1,5 +1,6 @@
 import { IoArrowForward } from "react-icons/io5";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 export default function HeroSection({ tittle, message }) {
   const sentence = {
@@ -52,15 +53,7 @@ export default function HeroSection({ tittle, message }) {
             </motion.span>
           ))}
         </motion.h3>
-        <button
-          className={`group flex items-center justify-center space-x-3 bg-[#5ED0E7] text-white w-64 mx-auto py-3.5 mt-5 rounded-full transition-all duration-300 hover:bg-white hover:text-gray-900`}
-        >
-          <span className="text-xl font-semibold">Book a Call</span>
-          <IoArrowForward
-            size={25}
-            className="transition-transform transform -rotate-45 group-hover:translate-x-1"
-          />
-        </button>
+        <Button />
       </div>
     </div>
   );
