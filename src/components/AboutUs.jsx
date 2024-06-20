@@ -4,9 +4,9 @@ import Button from "./Button";
 function AboutUs() {
   return (
     <div className=" py-16">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-2 lg:px-8">
         <div className="lg:flex lg:justify-between lg:space-x-8">
-          <div className="w-1/3">
+          <div className="lg:w-1/3">
             <h2 className="text-5xl ubuntu-bold tracking-tight text-white">
               What we do
             </h2>

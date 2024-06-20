@@ -1,4 +1,4 @@
-const Plans = [
+const Package = [
   {
     tittle: "Book a call",
     Para: "Customize your needs.",
@@ -32,4 +32,4 @@ const Plans = [
   },
 ];
 
-export default Plans;
+export default Package;

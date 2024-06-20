@@ -43,8 +43,8 @@ const Faqs = ({ Q, children }) => {
 
 export default function FAQ() {
   return (
-    <div className=" relative  text-white flex px-6 justify-start space-x-8">
-      <div className="w-1/3 lg:h-[10vh] sticky top-20">
+    <div className=" relative  text-white lg:flex lg:px-6 px-2 lg:justify-start lg:space-x-8">
+      <div className="lg:w-1/3 py-10 lg:h-[10vh] lg:sticky top-20">
         <h1 className="text-5xl ubuntu-bold">FAQ</h1>
         <p>Clear things out here.</p>
       </div>
