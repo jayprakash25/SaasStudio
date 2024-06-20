@@ -1,40 +1,35 @@
 const Plans = [
   {
-    tittle: "Books a call",
-    Para: "Explore plans that fit your needs.",
+    tittle: "Book a call",
+    Para: "Customize your needs.",
     features: [],
   },
   {
     tittle: "Landing page",
     Para: "A single page website with all the features that you need.",
     features: [
-      "Average 3 week delivery",
+      "1 week delivery",
       "Unlimited features",
+      "Unlimited revisions",
       "Design",
-      "Tick icon",
       "Development",
-      "Tick icon",
       "Deployment",
-      "Tick icon",
       "Maintenance",
     ],
   },
   {
-    tittle: "Books a call",
+    tittle: "Multipage website",
     Para: "A multipage website with all the requested features and third-party integrations.",
     features: [
-      "Average 3 week delivery",
+      "3 week delivery",
       "Unlimited features",
+      "Unlimited revisions",
       "Design",
-      "Tick icon",
       "Development",
-      "Tick icon",
       "Deployment",
-      "Tick icon",
       "Maintenance",
     ],
   },
 ];
-
 
 export default Plans;

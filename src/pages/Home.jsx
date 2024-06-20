@@ -6,10 +6,12 @@ import Plans from "../data/Plans";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
+import { FaCircleCheck } from "react-icons/fa6";
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-[#141414] to-[#1f1f1f] w-screen overflow-x-clip px-2">
+    <div className="bg-[#222222] w-screen overflow-x-clip px-2">
       <HeroSection
         tittle={"SaaS Studios"}
         message={"WE DESIGN FOR THE FUTURE."}
@@ -34,7 +36,7 @@ export default function Home() {
       {/* why our clients  */}
 
       <div className="relative pt-24 mx-auto max-w-7xl md:px-7">
-        <div className="lg:flex gap-10">
+        <div className="lg:flex justify-between space-x-8">
           <div className="lg:sticky top-24 lg:h-[50vh] px-6 text-white md:px-0 md:w-1/3">
             <h1 className="max-w-md mt-16 text-2xl font-bold md:text-5xl md:max-w-sm">
               Why Our Clients Choose Us
@@ -49,7 +51,7 @@ export default function Home() {
                 style={{ top: `${i * 5 + 10}%` }}
               >
                 <div
-                  className={`max-w-md md:max-w-2xl bg-[#272727] p-10 rounded-xl space-y-4 ${
+                  className={`max-w-md md:max-w-max bg-[#272727] p-10 rounded-xl space-y-4 ${
                     i % 2 !== 0 ? "bg-[#5ED0E7] text-black" : "text-white"
                   }`}
                 >
@@ -96,55 +98,61 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* about us  */}
+
+      {/* -----------------------------about us----------------------------  */}
       <AboutUs />
+
+      <FAQ />
+
+      {/*-------------------------------- Plans ------------------------------- */}
+
       <div className="justify-between gap-10 mx-auto pt-28 max-w-7xl  md:flex">
         <div className="px-6 text-white ">
           <h1 className="text-2xl font-bold md:text-5xl md:max-w-lg">
-            Choose the tariff plan that suits you needs
+            Choose Your Plan
           </h1>
         </div>
       </div>
-
-      <div className="flex flex-col max-w-md gap-5 mx-auto py-14 md:flex-row md:max-w-7xl px-6">
+      <div className="flex flex-col  gap-5 mx-auto py-14 lg:grid lg:grid-cols-3 w-full px-6">
         {Plans.map((item, i) => {
           return (
             <React.Fragment key={i}>
               <div
                 className={` ${
-                  item.tittle === "Landing page"
+                  i % 2 !== 0
                     ? "bg-[#5ED0E7] text-black"
-                    : "text-white"
-                } space-y-4 max-w-md rounded-xl  p-8`}
+                    : "bg-[#272727] text-white"
+                } space-y-4 max-w-md rounded-xl shadow-lg  p-8`}
               >
-                <h1 className="text-xl font-bold md:text-2xl">{item.tittle}</h1>
-                <p className=" md:text-lg">{item.Para}</p>
+                <h1 className="text-xl font-bold md:text-2xl ubuntu-bold ">
+                  {item.tittle}
+                </h1>
+                <p className=" md:text-lg poppins-medium h-24">{item.Para}</p>
                 <button
                   className={` w-full py-3 rounded-full font-semibold ${
-                    item.tittle === "Landing page"
+                    i % 2 !== 0
                       ? "bg-black text-white"
                       : "bg-[#5ED0E7]  text-black"
                   }`}
                 >
                   Get Started
                 </button>
+                <hr
+                  className={`${i === 0 && "hidden"}  bg-black h-0.5 w-full`}
+                />
                 {item.features.length > 0 ? (
-                  <h1 className="text-lg font-bold md:text-2xl">Features : </h1>
+                  <h1 className="text-lg ubuntu-bold md:text-2xl">
+                    Features :{" "}
+                  </h1>
                 ) : null}
-                <ul className="space-y-3">
+                <ul className="space-y-3 poppins-medium">
                   {item.features.map((item) => {
                     return (
                       <li className="flex items-center gap-3">
-                        {item.tittle === "Landing page" ? (
-                          <img
-                            src="https://squarelogic.space/_next/image?url=%2Ftick-black.svg&w=32&q=75"
-                            alt=""
-                          />
+                        {i % 2 !== 0 ? (
+                          <FaCircleCheck color="black" />
                         ) : (
-                          <img
-                            src="https://squarelogic.space/_next/image?url=%2Ftick-green.svg&w=32&q=75"
-                            alt=""
-                          />
+                          <FaCircleCheck color="#5ED0E7" />
                         )}
                         <h1>{item}</h1>
                       </li>
@@ -156,7 +164,7 @@ export default function Home() {
           );
         })}
       </div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Footer />
     </div>
   );

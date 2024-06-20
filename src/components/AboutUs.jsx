@@ -4,15 +4,14 @@ import Button from "./Button";
 function AboutUs() {
   return (
     <div className=" py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:justify-between lg:space-x-8">
-          <div className="lg:flex-1">
+          <div className="w-1/3">
             <h2 className="text-5xl ubuntu-bold tracking-tight text-white">
               What we do
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Learn more about our history, mission, and the talented team
-              dedicated to your success.
+              Learn more about why we do, what we do.
             </p>
             <div className="flex lg:hidden mt-8 justify-center">
               <Button />
@@ -24,7 +23,7 @@ function AboutUs() {
                 <h3 className="text-xl leading-6 ubuntu-bold text-white">
                   The Story. The WHY
                 </h3>
-                <div className="mt-2 max-w-xl text-justify poppins-medium text-lg text-white">
+                <div className="mt-2  text-justify poppins-medium text-lg text-white">
                   <p>
                     I've encountered numerous instances where I've had to
                     abandon purchasing items because the platform wasn't up to
