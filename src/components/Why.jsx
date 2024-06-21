@@ -15,7 +15,7 @@ function Why() {
           {data.map((item, i) => (
             <div
               key={i}
-              className={`sticky h-[60vh]`}
+              className={`sticky h-[80vh]`}
               style={{ top: `${i * 5 + 10}%` }}
             >
               <div

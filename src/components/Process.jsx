@@ -11,7 +11,7 @@ function Process() {
         {workflow.map((item, i) => (
           <div key={i} className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#5ED0E7] to-[#0c4356] rounded-full text-white">
-              <span className="text-3xl font-bold">{i + 1}</span>
+              <span className="text-3xl font-bold">{item.icon}</span>
             </div>
             <div>
               <h3 className="text-xl ubuntu-bold text-white mb-2">

@@ -33,6 +33,12 @@ function Plans() {
                       ? "bg-black text-white"
                       : "bg-[#5ED0E7]  text-black"
                   }`}
+                  onClick={() => {
+                    window.open(
+                      "https://calendly.com/firebase476/30min",
+                      "_blank"
+                    );
+                  }}
                 >
                   Get Started
                 </button>

@@ -23,7 +23,7 @@ function AboutUs() {
                 <h3 className="text-xl leading-6 ubuntu-bold text-white">
                   The Story. The WHY
                 </h3>
-                <div className="mt-2  text-justify poppins-medium text-lg text-white">
+                <div className="mt-2  md:text-justify poppins-medium text-lg text-white">
                   <p>
                     I've encountered numerous instances where I've had to
                     abandon purchasing items because the platform wasn't up to
