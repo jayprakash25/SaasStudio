@@ -58,7 +58,7 @@ export default function Contact() {
             ></textarea>
             <button
               onClick={saveData}
-              className="w-full text-center bg-[#aaeec4] py-3 rounded-lg my-2 font-semibold"
+              className="w-full text-center bg-[#5ED0E7] py-3 rounded-lg my-2 font-semibold"
             >
               Submit
             </button>
