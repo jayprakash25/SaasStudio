@@ -3,7 +3,7 @@ import workflow from "../data/Workflow";
 
 function Process() {
   return (
-    <div className="px-2 mx-auto max-w-7xl md:px-8">
+    <div className="px-2 mx-auto max-w-7xl md:px-8 pt-24">
       <h2 className="text-5xl ubuntu-bold text-center text-white mb-10">
         The Way We Work
       </h2>

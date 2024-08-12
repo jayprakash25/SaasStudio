@@ -7,6 +7,7 @@ import FAQ from "../components/FAQ";
 import Process from "../components/Process";
 import Why from "../components/Why";
 import Plans from "../components/Plans";
+import Testimonials from "../data/Testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       {/* why our clients  */}
 
       <Why />
+
+      <Testimonials />
 
       {/* ----------------------------- Process ------------------------------- */}
       <Process />
